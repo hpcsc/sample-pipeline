@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="128">
+    <server artifactsdir="artifacts" agentAutoRegisterKey="xxx" webhookSecret="yyy" commandRepositoryLocation="default" serverId="zzz" tokenGenerationKey="ttt">
+        <siteUrls />
+        <backup emailOnSuccess="true" emailOnFailure="true" />
+    </server>
+    <config-repos>
+        <config-repo pluginId="yaml.config.plugin" id="backend-config-repo">
+            <git url="http://git-repo:3000/gogs/sample-pipeline-backend.git" />
+        </config-repo>
+        <config-repo pluginId="yaml.config.plugin" id="mobile-config-repo">
+            <git url="http://git-repo:3000/gogs/sample-pipeline-mobile.git" />
+        </config-repo>
+        <config-repo pluginId="yaml.config.plugin" id="system-tests-config-repo">
+            <git url="http://git-repo:3000/gogs/sample-pipeline-system-tests.git" />
+        </config-repo>
+    </config-repos>
+    <pipelines group="SamplePipeline" />
+</cruise>

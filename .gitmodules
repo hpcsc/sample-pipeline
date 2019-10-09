@@ -1,0 +1,9 @@
+[submodule "sample-pipeline-system-tests"]
+	path = sample-pipeline-system-tests
+	url = https://github.com/hpcsc/sample-pipeline-system-tests
+[submodule "sample-pipeline-mobile"]
+	path = sample-pipeline-mobile
+	url = https://github.com/hpcsc/sample-pipeline-mobile
+[submodule "sample-pipeline-backend"]
+	path = sample-pipeline-backend
+	url = https://github.com/hpcsc/sample-pipeline-backend

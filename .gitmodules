@@ -7,3 +7,6 @@
 [submodule "sample-pipeline-backend"]
 	path = sample-pipeline-backend
 	url = https://github.com/hpcsc/sample-pipeline-backend
+[submodule "gogs"]
+	path = gogs
+	url = https://github.com/hpcsc/gogs

@@ -13,8 +13,6 @@ The repository contains 3 git submodules:
 
 Assuming GoCD server is setup using docker-compose like: [https://github.com/hpcsc/gocd](https://github.com/hpcsc/gocd) and Gogs local git server is available on localhost
 
-- Go to Gogs to create 3 empty repositories: `sample-pipeline-backend`, `sample-pipeline-mobile`, `sample-pipeline-system-tests`
-- Upload your host machine public key to Gogs (The script below assumes ssh access to gogs is available)
 - Run:
 ```
 ./scripts/setup.sh

@@ -1,0 +1,13 @@
+{
+    "id": "mobile-config-repo",
+    "plugin_id": "yaml.config.plugin",
+    "material": {
+        "type": "git",
+        "attributes": {
+            "url": "http://git-repo:3000/gogs/sample-pipeline-mobile.git",
+            "branch": "master",
+            "auto_update": true
+        }
+    },
+    "configuration": []
+}

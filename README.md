@@ -11,10 +11,23 @@ The repository contains 3 git submodules:
 
 ## Setup
 
-Assuming GoCD server is setup using docker-compose like: [https://github.com/hpcsc/gocd](https://github.com/hpcsc/gocd) and Gogs local git server is available on localhost
+### Assumptions
 
-- Run:
+- GoCD server and Gogs are setup using docker-compose: [https://github.com/hpcsc/gocd](https://github.com/hpcsc/gocd)
+- Default gogs user is registered with credentials:
+
 ```
-./scripts/setup.sh
+Username: gogs
+Password: password.123
 ```
-- Go to GoCD, update Config XML to use config repositories above. Sample GoCD config XML is at `sample-gocd-config.xml`
+- `jq`, `curl` are available
+- Default ssh public key is available at `~/.ssh/id_rsa.pub`
+
+### Setup
+
+Run: `./scripts/setup.sh`
+
+This script will call 2 sub-scripts to:
+
+- Setup Gogs: clone all git submodules, upload default public key to Gogs, push submodules to Gogs
+- Setup GoCD: create config repos in GoCD using REST API

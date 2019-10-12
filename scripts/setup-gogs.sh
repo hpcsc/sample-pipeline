@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo "=== update git submodule"
-git submodule update --init --remote
+echo "=== updating git submodule"
+git submodule update --init
 
-echo "=== upload default public key to gogs"
+echo "=== creating default gogs user"
+./gogs/scripts/create-default-user.sh
+
+echo "=== uploading default public key to gogs"
 ./gogs/scripts/upload-public-key.sh
 
 echo "=== creating repositories in gogs"
